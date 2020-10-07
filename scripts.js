@@ -21,7 +21,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 document.querySelector('.btn-hold').addEventListener('click', function() {
   totalScores[activePlayer] += currentScore;
   document.getElementById(`score-${activePlayer}`).textContent = totalScores[activePlayer];
-  if (totalScores[activePlayer] >= 10) {
+  if (totalScores[activePlayer] >= 25) {
     document.querySelector(`#name-${activePlayer}`).textContent = 'WINNER';
     diceImg.style.display = 'none';
     document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner');
@@ -65,4 +65,23 @@ function init() {
   document.querySelector('.btn-roll').style.display = 'block';
   document.querySelector('.btn-hold').style.display = 'block';
 
+}
+
+// Modal operation
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
