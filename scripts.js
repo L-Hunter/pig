@@ -28,8 +28,8 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     document.querySelector(`.player-${activePlayer}-panel`).classList.remove('active');
     document.querySelector('.btn-roll').style.display = 'none';
     document.querySelector('.btn-hold').style.display = 'none';
-
   } else {
+    diceImg.style.display = 'none';
     switchPlayer();
   }
 });
@@ -41,7 +41,6 @@ function switchPlayer() {
   activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
   document.querySelector('.player-0-panel').classList.toggle('active');
   document.querySelector('.player-1-panel').classList.toggle('active');
-  diceImg.style.display = 'none';
 };
 
 
