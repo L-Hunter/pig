@@ -168,15 +168,16 @@ button:focus {
 .modal-content {
   background-color: #F4ECE8;
   margin: 15% auto;
-  padding: 30px;
+  padding: 60px;
   border: 1px solid #966D59;
   width: 80%;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .close {
-  color: #966D59;
+  color:  #39241B;
   float: right;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
 }
 
@@ -189,5 +190,34 @@ button:focus {
 
 h1, h2 {
   text-align: center;
-  padding-bottom: 5px;
+  color: #C3604C;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 30px;
+  color: #39241B;
+}
+
+.modal-images {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-img {
+  padding-right: 2px;
+  height: 20px;
+}
+
+.reverse {
+  transform: scaleX(-1);
+}
+
+ul {
+  font-size: 18px;
+  list-style-type: square;
+  list-style-position: inside;
 }
